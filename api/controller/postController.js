@@ -1,6 +1,20 @@
 const postModel = require('../models/postModel')
 
 
+const getPost =async (req,res) => {
+
+    try {
+      const  getAllPost = await postModel.find()
+
+        if(!getAllPost){
+            res.status(400).json("no data found")
+        }
+
+        res.json(getAllPost)
+    } catch (error) {
+        res.status(400).json(error.message)
+    }
+}
 
 
 const addPost =async (req,res) => {
@@ -19,4 +33,4 @@ const addPost =async (req,res) => {
 }
 
 
-module.exports = {addPost}
+module.exports = {addPost,getPost}
