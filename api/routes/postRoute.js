@@ -1,9 +1,9 @@
-const { addPost, getPost } = require('../controller/postController')
+const { addPost, getALLPost } = require('../controller/postController')
 
 const router =require('express').Router()
 
 
-router.get('/post-all',getPost)
+router.get('/post-all',getALLPost)
         .post('/post',addPost)
 
 

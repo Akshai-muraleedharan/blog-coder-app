@@ -1,7 +1,7 @@
 const postModel = require('../models/postModel')
 
 
-const getPost =async (req,res) => {
+const getALLPost =async (req,res) => {
 
     try {
       const  getAllPost = await postModel.find()
@@ -33,4 +33,4 @@ const addPost =async (req,res) => {
 }
 
 
-module.exports = {addPost,getPost}
+module.exports = {addPost,getALLPost}
