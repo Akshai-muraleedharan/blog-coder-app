@@ -1,19 +1,11 @@
 const postModel = require('../models/postModel')
 
 
-// const post = (req,res)=>{
-//     res.send("hello akshai welcome to new world")
-// }
+
 
 const addPost =async (req,res) => {
     const {title,content} = req.body
-
-    const post =new postModel(
-        {
-            title,
-            content
-        }
-    )
+    const post =new postModel( {title, content})
 
     try {
         if(!title || !content){
