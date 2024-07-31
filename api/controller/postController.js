@@ -17,6 +17,21 @@ const getALLPost =async (req,res) => {
 }
 
 
+const postUpdate = async (req,res) => {
+   
+    try {
+        const singlePost = await postModel.findByIdAndUpdate(req.params.id ,req.body)
+
+        if(!singlePost){
+            res.json("could not update")
+        }
+        res.status(200).json(singlePost)
+    } catch (error) {
+        res.status(400).json(error.message)
+    }
+} 
+
+
 const addPost =async (req,res) => {
     const {title,content} = req.body
     const post =new postModel( {title, content})
@@ -33,4 +48,4 @@ const addPost =async (req,res) => {
 }
 
 
-module.exports = {addPost,getALLPost}
+module.exports = {addPost,getALLPost,postUpdate}
