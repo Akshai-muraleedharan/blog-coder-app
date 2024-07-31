@@ -32,6 +32,35 @@ const postUpdate = async (req,res) => {
 } 
 
 
+const postDelete = async ( req,res)=> {
+  
+    try {
+        const deletePost =await postModel.findByIdAndDelete(req.params.id)
+
+        if(!deletePost){
+         res.json("could not delete")
+        }
+     
+        res.status(200).json('delete sucessfully')
+    } catch (error) {
+        res.status(400).json(error.message)
+    }
+}
+
+const singlePost =async (req,res) => {
+
+    try {
+        const postSingle =await postModel.findById(req.params.id)
+        if(!postSingle){
+            res.json("data not found")
+        }
+        res.status(200).json(postSingle)
+    } catch (error) {
+       res.status(400).json(error.message)
+    }
+}
+
+
 const addPost =async (req,res) => {
     const {title,content} = req.body
     const post =new postModel( {title, content})
@@ -48,4 +77,4 @@ const addPost =async (req,res) => {
 }
 
 
-module.exports = {addPost,getALLPost,postUpdate}
+module.exports = {addPost,getALLPost,postUpdate,postDelete,singlePost}
