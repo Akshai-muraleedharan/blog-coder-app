@@ -74,7 +74,7 @@ const addPost =async (req,res) => {
     } catch (error) { 
         res.json(error.message)
     }
-}
+} 
 
 
 module.exports = {addPost,getALLPost,postUpdate,postDelete,singlePost}
