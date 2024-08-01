@@ -19,14 +19,54 @@ body{
 button{
     font-size: 14px;
     padding: 7px;
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
-    background-color: #6a6aff;
+    background-color: #3c3cd3;
     color: white;
    
 }
 
+button:hover{
+    opacity: 0.8;
+}
+.footer_logo{
+    display: inline-block;
+}
 
+.bi-facebook{
+    padding: 3px;
+    border-radius: 5px;
+    color: #316FF6;
+    background-color: #fff;
+}
+.bi-instagram{
+    background-image: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    padding: 3px;
+    border-radius: 5px;
+    color: #fff;
+    
+} 
+.bi-threads{
+    padding: 3px;
+    border-radius: 5px;
+    color:#000;
+    background-color: #fff;
+}
+
+.bi-twitter{
+    padding: 3px;
+    border-radius: 5px;
+    color: #1DA1F2;
+    background-color: #fff;
+}
+
+@media (min-width: 1000px){
+    .logo:hover{
+        color: #fff !important;
+        background-color: #000;
+    }
+    
+}
 
 @media (max-width: 575.98px) { 
     .marginBottom{
@@ -38,4 +78,5 @@ button{
     .lineHeight{
         line-height: 25px !important;
     }
+   
  }

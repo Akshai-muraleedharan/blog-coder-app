@@ -12,7 +12,7 @@ function singleDataOutPut(data){
     
      <div class="card" style="width: 100%;">
               <div class="card-body p-4" >
-                <h5 class="card-title text-center">${data.title}</h5>
+                <h5 class="card-title text-center mb-4">${data.title}</h5>
                 
                 <p class="card-text"> ${data.content} </p>
                
