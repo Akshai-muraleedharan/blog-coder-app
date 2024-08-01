@@ -20,3 +20,10 @@ button{
     background-color: #6a6aff;
     color: white;
 }
+
+
+@media (max-width: 575.98px) { 
+    .marginBottom{
+        margin-bottom: 10px;
+    }
+ }
