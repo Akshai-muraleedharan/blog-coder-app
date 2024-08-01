@@ -62,11 +62,11 @@ const singlePost =async (req,res) => {
 
 
 const addPost =async (req,res) => {
-    const {title,content} = req.body
-    const post =new postModel( {title, content})
+    const {title,content,coder} = req.body
+    const post =new postModel( {title, content,coder})
 
     try {
-        if(!title || !content){
+        if(!title || !content || !coder){
             res.json("title or message is required")
         }
         await post.save()
@@ -74,7 +74,7 @@ const addPost =async (req,res) => {
     } catch (error) { 
         res.json(error.message)
     }
-} 
+}  
 
 
 module.exports = {addPost,getALLPost,postUpdate,postDelete,singlePost}

@@ -1,12 +1,13 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const app = express()
-
+const cors =require('cors')
 const postRouter =require('./routes/postRoute')
 dotenv.config()
 
 app.use(express.json()) 
 
+app.use(cors())
 require('./db/db.js')
 
 app.use('/api/v1',postRouter)

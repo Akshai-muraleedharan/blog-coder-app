@@ -7,6 +7,6 @@ router.get('/post-all',getALLPost)
         .post('/post',addPost)
         .put('/edit/:id',postUpdate)
         .delete('/:id',postDelete)
-        .get('/:id',singlePost)
+        .get('/post/:id',singlePost)
 
 module.exports =router;

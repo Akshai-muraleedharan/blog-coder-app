@@ -9,8 +9,12 @@
 
 body{
     font-family: "Poppins", sans-serif;
+    background-color: #f5f3f3;
 }
 
+.navColor{
+    background-color:#f5f3f3 !important ;
+}
 
 button{
     font-size: 14px;
@@ -19,11 +23,19 @@ button{
     border: none;
     background-color: #6a6aff;
     color: white;
+   
 }
+
 
 
 @media (max-width: 575.98px) { 
     .marginBottom{
         margin-bottom: 10px;
+    }
+    .cardBody{
+        padding: 5px !important;
+    }
+    .lineHeight{
+        line-height: 25px !important;
     }
  }
