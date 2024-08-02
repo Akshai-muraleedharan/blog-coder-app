@@ -29,7 +29,7 @@ async function singleData()  {
   
     const productId =productUrl.get('id')
   
-    const response =await fetch(`http://localhost:4005/api/v1/post/${productId}`)
+    const response =await fetch(`https://blog-coder-app.onrender.com/api/v1/post/${productId}`)
     
     const product =await response.json()
 
