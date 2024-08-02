@@ -107,21 +107,21 @@ button:hover{
     height: 20px;
     width: 40px;
     display: inline-block;
-     border-radius: 20px;
+     border-radius: 8px;
      background-color: #d9d9d9;
   }
 
   .loader_title{
     height: 30px;
     width: 100px;
-     border-radius: 20px;
+     border-radius: 8px;
      background-color: #d9d9d9;
   }
 
   .loader_content{
     height: 30px;
     width: 400px;
-     border-radius: 20px;
+     border-radius: 8px;
      background-color: #d9d9d9;
   }
 
