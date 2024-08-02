@@ -4,7 +4,10 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon api/server.js",
-    "start": "node api/server.js"
+    "startnode": "node api/server.js",
+
+        "start": "concurrently \"npm run start --prefix clients\" \"npm run start --prefix api\"",
+    "build": "concurrently \"npm run start --prefix clients\" \"npm run start --prefix api\""
   },
   "author": "",
   "license": "ISC",
