@@ -88,7 +88,7 @@ button:hover{
  /* loader style start from here */
 
  .loader{
-    background-color: #ebe9e9;
+    background-color: #d1d1d1;
     animation: mymove 5s infinite;
      visibility: hidden; 
  }
