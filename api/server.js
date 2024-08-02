@@ -7,6 +7,9 @@ dotenv.config()
 
 app.use(express.json()) 
 
+app.get('/',(req,res)=>{
+        res.send('hello world')
+})
 app.use(cors())
 require('./db/db.js')
 
