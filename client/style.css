@@ -78,5 +78,8 @@ button:hover{
     .lineHeight{
         line-height: 25px !important;
     }
-   
+   .maint_503{
+    font-size: 17px;
+        font-weight: 700;
+   }
  }
