@@ -5,11 +5,9 @@ const getALLPost =async (req,res) => {
 
     try {
       const  getAllPost = await postModel.find()
-
         if(!getAllPost){
             res.status(400).json("no data found")
         }
-
         res.json(getAllPost)
     } catch (error) {
         res.status(400).json(error.message)

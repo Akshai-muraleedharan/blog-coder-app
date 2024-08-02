@@ -83,3 +83,56 @@ button:hover{
         font-weight: 700;
    }
  }
+
+
+ /* loader style start from here */
+
+ .loader{
+    background-color: #ebe9e9;
+    animation: mymove 5s infinite;
+     visibility: hidden; 
+ }
+
+ .loader.display{
+    visibility: visible;
+    
+ }
+
+ @keyframes mymove {
+    50% {opacity: 0.3;}
+  }
+
+  .loader_span{
+   
+    height: 20px;
+    width: 40px;
+    display: inline-block;
+     border-radius: 2px;
+     background-color: #d9d9d9;
+  }
+
+  .loader_title{
+    height: 30px;
+    width: 100px;
+     border-radius: 2px;
+     background-color: #d9d9d9;
+  }
+
+  .loader_content{
+    height: 30px;
+    width: 400px;
+     border-radius: 2px;
+     background-color: #d9d9d9;
+  }
+
+ 
+
+
+  @media (max-width: 575.98px){
+    .loader_content{
+        width: 100%;
+    }
+    .single_loader{
+        height: 40vh !important;
+    }
+  }
