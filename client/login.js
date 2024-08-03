@@ -19,6 +19,7 @@ async function loginFetch(e) {
   
   try {
     const res = await fetch(`http://blog-coder-app.onrender.com/api/v1/user/login`,{
+        credentials: 'include',
         method:"POST",
         headers:{
              'content-Type' : 'application/json'
