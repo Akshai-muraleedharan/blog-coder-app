@@ -140,17 +140,51 @@ button:hover{
 
   /* signup page */
 
+  .sigupPage_titile{
+    background-image: url("https://media.istockphoto.com/id/1156837650/photo/javascript-code-computer-language-programming-internet-text-editor-components-display-screen.jpg?b=1&s=612x612&w=0&k=20&c=lhki88iyksoEJ_-XfrJd-MV6zUph2Dcij8VmGrQG1xg=");
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #fff;
+    gap: 125px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
   .btn-gradient {
     background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
     border: 0;
     color: #fff;
   }
 
+  .display_none{
+        display: none;
+  }
+
   @media (max-width: 575.98px){
     .sigupPage_titile{
         margin-bottom: 30px;
+        display: none !important;
+    }
+    .display_none{
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 700;
     }
     .greeting{
         display: none;
+    }
+  }
+
+  @media (min-width:576px) and (max-width: 767px){
+    .sigupPage_titile{
+        margin-bottom: 30px;
+        display: none !important;
+    }
+    .display_none{
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 700;
     }
   }
