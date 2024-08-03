@@ -11,10 +11,12 @@ dotenv.config()
 
 app.use(express.json()) 
 
-app.use(cors({
-      origin: "https://blog-coder-app.vercel.app/",
-        credentials: true,
-}))
+// {
+//         origin: "https://blog-coder-app.vercel.app/",
+//           credentials: true,
+//   })
+
+app.use(cors())
 app.use(cookieParser());
 require('./db/db.js')
 
