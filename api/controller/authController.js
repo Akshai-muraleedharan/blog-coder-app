@@ -7,6 +7,7 @@ const handleErrors = (err) => {
   let errors = { email: '', password: '',username: '' }; 
 
   // incorrect email
+  
   if (err.message === 'incorrect email') {
     errors.email = 'That email is not registered';
   }
