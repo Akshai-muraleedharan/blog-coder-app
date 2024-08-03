@@ -18,7 +18,7 @@ app.use(express.json())
 
 app.use(cors(
         {
-                origin: "https://blog-coder-app.vercel.app/",
+                origin: "*",
                   credentials: true,
         }
 ))
