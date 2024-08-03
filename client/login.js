@@ -1,7 +1,7 @@
 const emailEle =document.getElementById('email-ele');
 const passwordEle =document.getElementById('password-ele');
 const btn =document.getElementById('btn-ele')
-const url ="http://localhost:4005/api/v1/user/login"
+
 
 async function loginFetch(e) {
   e.preventDefault()
@@ -18,7 +18,7 @@ async function loginFetch(e) {
   passwordError.textContent =''
   
   try {
-    const res = await fetch(url,{
+    const res = await fetch(`http://blog-coder-app.onrender.com/api/v1/user/login`,{
         method:"POST",
         headers:{
              'content-Type' : 'application/json'

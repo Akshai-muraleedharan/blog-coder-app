@@ -12,7 +12,7 @@ dotenv.config()
 app.use(express.json()) 
 
 app.use(cors({
-      origin: "http://127.0.0.1:5501",
+      origin: "https://blog-coder-app.vercel.app/",
         credentials: true,
 }))
 app.use(cookieParser());

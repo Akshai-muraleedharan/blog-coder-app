@@ -2,7 +2,7 @@ const userNameEle =document.getElementById('username-ele');
 const emailEle =document.getElementById('email-ele');
 const passwordEle =document.getElementById('password-ele');
 const btn =document.getElementById('btn-ele')
-const url ="http://localhost:4005/api/v1/user/signup"
+
 
 
 
@@ -26,7 +26,7 @@ async function signupPost(e){
  
     
     try {
-    const res =await fetch(url,{
+    const res =await fetch(`http://blog-coder-app.onrender.com/api/v1/user/signup`,{
 
            credentials: 'include',
         method:'POST',
