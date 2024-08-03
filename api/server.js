@@ -16,7 +16,12 @@ app.use(express.json())
 //           credentials: true,
 //   })
 
-app.use(cors())
+app.use(cors(
+        {
+                origin: "*",
+                          credentials: true,
+        }
+))
 app.use(cookieParser());
 require('./db/db.js')
 
