@@ -1,6 +1,7 @@
 //    variables
    const postList = document.getElementById('output-ele');
-    const url ="https://blog-coder-app.onrender.com/api/v1/post-all";
+    const url ="http://localhost:4005/api/v1/post-all";
+    // const url ="https://blog-coder-app.onrender.com/api/v1/post-all";
     let outPut ='';
     const loader =document.querySelector('.loader')
 
