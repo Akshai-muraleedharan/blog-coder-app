@@ -15,10 +15,10 @@ app.use(express.json())
 //         origin: "https://blog-coder-app.vercel.app/",
 //           credentials: true,
 //   })
-
+const allowedOrigin = 'https://blog-coder-app.vercel.app';
 app.use(cors(
         {
-                origin: "*",
+                origin: allowedOrigin,
                   credentials: true,
         }
 ))

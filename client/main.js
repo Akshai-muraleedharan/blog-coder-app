@@ -41,7 +41,10 @@
         // data fetching function
         async function fetchDatas(){
                 displayLoader()
-            await fetch(url)
+            await fetch(url, {
+                method: 'GET',
+                credentials: 'include',
+            })
                 .then(res => res.json())
                 .then(data => renderPost(data))
             }
