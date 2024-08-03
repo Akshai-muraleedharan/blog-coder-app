@@ -136,3 +136,21 @@ button:hover{
         height: 40vh !important;
     }
   }
+
+
+  /* signup page */
+
+  .btn-gradient {
+    background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+    border: 0;
+    color: #fff;
+  }
+
+  @media (max-width: 575.98px){
+    .sigupPage_titile{
+        margin-bottom: 30px;
+    }
+    .greeting{
+        display: none;
+    }
+  }
