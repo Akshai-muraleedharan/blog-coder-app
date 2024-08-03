@@ -160,6 +160,15 @@ button:hover{
         display: none;
   }
 
+  .warn{
+    margin: 0px;
+    font-size: 12px;
+    color: red;
+    text-align: end;
+    margin-top: 2px;
+    
+  }
+
   @media (max-width: 575.98px){
     .sigupPage_titile{
         margin-bottom: 30px;

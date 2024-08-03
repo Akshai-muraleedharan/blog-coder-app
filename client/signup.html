@@ -47,22 +47,37 @@
               <form class="row g-3 needs-validation" novalidate>
                 <h5>Signup</h5>
                 <div class="col-md-12">
-                  <div class="form-floating mb-3">
-                    <input type="email" class="form-control rounded-0 border-0 border-bottom" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Username</label>
+                  <div class="form-floating ">
+                    <input type="email" class="form-control rounded-0 border-0 border-bottom" id="username-ele" placeholder="name@example.com">
+                    <label for="username-ele">Username</label>
                   </div>
+
+                <div style="height:20px">
+                  <p class="warn" id="username-err"></p>
+                </div>
+                
+                 
                 </div>
                 <div class="col-md-12">
-                  <div class="form-floating mb-3">
-                    <input type="email" class="form-control rounded-0 border-0 border-bottom" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email</label>
+                  <div class="form-floating ">
+                    <input type="email" class="form-control rounded-0 border-0 border-bottom" id="email-ele" placeholder="name@example.com">
+                    <label for="email-ele">Email</label>
                   </div>
+
+                  <div style="height:20px">
+                    <p class="warn" id="email-error"></p>
+                  </div>
+                
                 </div>
 
                 <div class="col-md-12">
-                  <div class="form-floating mb-3">
-                    <input type="email" class="form-control rounded-0 border-0 border-bottom" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Password</label>
+                  <div class="form-floating ">
+                    <input type="email" class="form-control rounded-0 border-0 border-bottom" id="password-ele" placeholder="name@example.com">
+                    <label for="password-ele">Password</label>
+                  </div>
+
+                  <div style="height:20px">
+                    <p class="warn" id="pass-error"></p>
                   </div>
                 </div>
               
@@ -73,7 +88,7 @@
               
                    
                 <div class="col-12">
-                  <button class="col-12 btn-gradient" type="submit">SIGNUP</button>
+                  <button class="col-12 btn-gradient" id="btn-ele" type="submit">SIGNUP</button>
                 </div>
               </form>
             </div>
@@ -130,7 +145,7 @@
  </div>
 
 
-
+   <script src="./signup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
 </body>
 </html>
