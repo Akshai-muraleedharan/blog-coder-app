@@ -3,35 +3,36 @@ const User = require('../models/userModel');
 
 const requireAuth = (req, res, next) => {
   const token = req.cookies.jwt;
-
+  
+ 
   // check json web token exists & is verified
   if (token) {
-    jwt.verify(token, process.env.TOKEN, (err, decodedToken) => {
+    jwt.verify(token, process.env.TOKEN, (err,) => {
       if (err) {
-        console.log(err.message);
-        res.redirect('/login')
+       res.status(404).json("no token")
       } else {
-        console.log(decodedToken);
         next();
       }
-    }); 
-  } else {
+    });
+  } else {   
     res.redirect('/login');
   }
-}; 
+};  
 
 // check current user
-const checkUser = (req, res, next) => {
+const checkUser = (req, res, next) => {  
   const token = req.cookies.jwt;
   if (token) {
     jwt.verify(token, process.env.TOKEN, async (err, decodedToken) => {
       if (err) {
-        res.locals.user = null;
+        res.locals.user = null; 
         next();
       } else {
         let user = await User.findById(decodedToken.id);
         res.locals.user = user;
-        next();
+     
+        
+        next(); 
       }
     });
   } else {

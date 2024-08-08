@@ -18,7 +18,9 @@ async function loginFetch(e) {
   passwordError.textContent =''
   
   try {
-    const res = await fetch(`http://blog-coder-app.onrender.com/api/v1/user/login`,{
+          // https://blog-coder-app.onrender.com
+
+    const res = await fetch(`http://localhost:4005/api/v1/user/login`,{
         credentials: 'include',
         method:"POST",
         headers:{
@@ -37,14 +39,13 @@ async function loginFetch(e) {
         passwordError.textContent=data.errors.password
     }
     if(data.user){
-        location.assign('./user.html')
+        location.href="./index.html"
     }
     
   } catch (error) {
     
   }
 }
-
 
 
 btn.addEventListener('click',loginFetch)

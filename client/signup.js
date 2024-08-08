@@ -24,9 +24,10 @@ async function signupPost(e){
     
  console.log(userError);
  
+//  http://blog-coder-app.onrender.com
     
     try {
-    const res =await fetch(`http://blog-coder-app.onrender.com/api/v1/user/signup`,{
+    const res =await fetch(`http://localhost:4005/api/v1/user/signup`,{
 
            credentials: 'include',
         method:'POST',
@@ -49,7 +50,8 @@ async function signupPost(e){
         passwordError.textContent = data.errors.password
     }
     if(data.user){
-        location.assign('./login.html')
+         location.assign('./login.html')
+         
     }
 
     } catch (error) {

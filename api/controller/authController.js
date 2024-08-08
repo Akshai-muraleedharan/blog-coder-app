@@ -50,6 +50,12 @@ const createToken = (id) => {
   });
 };
 
+let options = {
+  maxAge: 1000 * 60 * 15, // expire after 15 minutes
+  httpOnly: true, // Cookie will not be exposed to client side code
+  sameSite: "none", // If client and server origins are different
+  secure: true // use with HTTPS only
+}
 
 
 module.exports.signup_post = async (req, res) => {
@@ -57,9 +63,11 @@ module.exports.signup_post = async (req, res) => {
 
   try {
     const user = await User.create({ email, password,username });
+    
+   
     const token = createToken(user._id);
-    res.cookie('jwt-token', token, { httpOnly: true, maxAge: maxAge * 1000, SameSite:'none' })
-    res.status(201).json( { user: user._id });
+    res.cookie('jwt', token,options );
+    res.status(201).json({ user: user._id });
   }
   catch(err) {
     const errors = handleErrors(err);
@@ -74,7 +82,9 @@ module.exports.login_post = async (req, res) => {
   try {
     const user = await User.login(email, password);
     const token = createToken(user._id);
-    res.cookie('jwt-token', token, { httpOnly: true, maxAge: maxAge * 1000 });
+   res.cookie('jwt-token', token, { httpOnly: true, maxAge: maxAge ,secure:false });
+   
+   
     res.status(200).json({ user: user._id });
   } 
   catch (err) {
@@ -82,9 +92,25 @@ module.exports.login_post = async (req, res) => {
     res.status(400).json({ errors });
   }
 
+} 
+  
+module.exports.User_profile = async(req,res,next) => {
+  const token = req.cookies.jwt;
+  if (token) {
+    jwt.verify(token, process.env.TOKEN, async (err, decodedToken) => {
+         if(err){
+          res.locals.user = null; 
+        next();
+         }else {
+          let user = await User.findById(decodedToken.id).select("-password");
+          res.status(200).json(user)
+       
+    } 
+  }
+)}
 }
-
+ 
 module.exports.logout_get = (req, res) => {
   res.cookie('jwt', '', { maxAge: 1 });
-  res.redirect('/');
-}
+  
+} 

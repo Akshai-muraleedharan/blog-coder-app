@@ -6,6 +6,9 @@
     box-sizing: border-box;
 }
 
+html{
+    behavior: smooth;
+}
 
 body{
     font-family: "Poppins", sans-serif;
@@ -195,5 +198,23 @@ button:hover{
         text-align: center;
         margin-top: 20px;
         font-weight: 700;
+    }
+  }
+
+ 
+
+
+  /* user html */
+
+  .profile{
+    background: #ddd7d7;
+    padding: 20px;
+    border-radius: 50%;
+  }
+
+
+  @media (min-width:320px) and (max-width: 330px){
+    .add_post_responsive{
+        padding: 4px;
     }
   }

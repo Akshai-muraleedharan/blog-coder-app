@@ -17,20 +17,23 @@
          <nav class="navbar navColor pt-4 navbar-expand-lg navbar-light bg-light marginBottom  mb-sm-4 mb-md-5">
 
             <div class="container-fluid">
-              <a class="navbar-brand p-2 border border-dark border-2 rounded fs-6 fw-bold logo" href="./index.html">Coder Blog</a>  
+              <a class="navbar-brand p-2 border border-dark border-2 rounded fs-6 fw-bold logo"  href="./index.html">Coder Blog</a>  
               
             
-                <!-- <div class="navbar-nav flex-row"> -->
-                  <!-- <a class="nav-link active d-none" aria-current="page" href="#">Home</a> -->
-                  <!-- <a href="./signup.html"><button>Create account</button></a> -->
-                <!-- </div>   -->
+                <div class="navbar-nav flex-row"> 
+                  
+                 <div style="display: flex;align-items: center;gap: 5px;">
+                  <div class="profile"></div>
+                  <a  href="#" id="log-out"><button  >log out</button></a> 
+                 </div>
+                 </div>  
                 
             </div>
           </nav>
-          <a href="./index.html">Home</a>
+         
         <div class="d-flex justify-content-center flex-column align-items-center" style="height:50vh">
-          <h3 class="mb-4">user page</h3>
-            <h1 class="maint_503">503 PAGE IS UNDER MAINTENANCE</h1>
+          <h3 class="mb-4" id="user-name"></h3>
+           
         </div>
 
 
@@ -87,8 +90,47 @@
         
        
 
-
-    
+<!-- 
+    <script src="./user.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
-</body>
+  <script>
+   const userName = localStorage.getItem('username');
+   const userNameData =document.getElementById('user-name')
+   const logOutBtn =document.getElementById('log-out')
+   const uri = "http://localhost:4005/api/v1/user/profile"   
+//   // const logOutUrl = "http://localhost:4005/api/v1/user/logout"
+
+
+ async function userDate(){
+  const response = await fetch(uri,{
+             method: 'GET',
+            credentials: 'include',
+   })
+
+  const userData =await response.json()
+ 
+  userNameData.innerHTML ="HELLO, " + userData.username
+    
+    
+  }
+   userDate()
+
+  
+
+  // async function logOutFunction(){
+    
+  
+  //   const response = await fetch(logOutUrl)
+  // const userData = await response.json()
+  //   console.log(userData);
+    
+    
+     
+  //  }
+ 
+
+   
+  
+  </script>
+  </body>
 </html>
