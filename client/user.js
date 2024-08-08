@@ -1,4 +1,4 @@
-const uri = "https://blog-coder-app-2.onrender.com/api/v1/user/profile"
+const uri = "https://blog-coder-app.onrender.com/api/v1/user/profile"
 const headerBtn =document.getElementById('header-btn')
 const postBtn = document.getElementById('post-btn')
 const accountBtn =document.getElementById('account_btn')
