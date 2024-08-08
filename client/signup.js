@@ -25,6 +25,12 @@ async function signupPost(e){
  console.log(userError);
  
 //  http://blog-coder-app.onrender.com
+
+    const userData ={
+            username:userName,
+            email:email,
+            password:password
+    }
     
     try {
     const res =await fetch(`https://blog-coder-app.onrender.com/api/v1/user/signup`,{
@@ -33,13 +39,9 @@ async function signupPost(e){
            credentials: 'include',
         method:'POST',
         headers:{
-            'content-Type' : 'application/json'
+            'Content-Type' : 'application/json'
         },
-        body:JSON.stringify({
-            username:userName,
-            email:email,
-            password:password
-        })
+        body:JSON.stringify(userData)
      })
      const data =await res.json()
      console.log(data);
