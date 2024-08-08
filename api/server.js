@@ -17,7 +17,7 @@ app.use(express.json())
 //           credentials: true,
 //   })
 // const allowedOrigin = 'https://blog-coder-app.vercel.app';
-const allowedOrigin = 'http://127.0.0.1:5501';
+const allowedOrigin = 'https://blog-coder-app-2.onrender.com';
 app.use(cors(
         {
                 origin: allowedOrigin,
