@@ -34,10 +34,12 @@ async function signupPost(e){
     
     try {
     const res =await fetch(`https://blog-coder-app.onrender.com/api/v1/user/signup`,{
+       
+        method:'POST',
         mode: 'cors',
         cache: 'no-cache',
            credentials: 'include',
-        method:'POST',
+           json: true,
         headers:{
             'Content-Type' : 'application/json'
         },
