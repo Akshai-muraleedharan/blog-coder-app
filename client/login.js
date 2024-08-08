@@ -26,7 +26,7 @@ async function loginFetch(e) {
         headers:{
              'content-Type' : 'application/json'
         },
-        body:JSON.stringify({
+        body:JSON.stringify({ 
             email:email,
             password:password
         })
