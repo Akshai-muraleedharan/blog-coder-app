@@ -27,6 +27,9 @@ app.use(cors(
 app.use(cookieParser());
 require('./db/db.js')
 
+app.get('/',(req,res)=> {
+        res.send('hello akshai vercel deploy successful')
+})
 
  app.get('*',checkUser)
 
