@@ -33,7 +33,7 @@ async function signupPost(e){
     }
     
     try {
-    const res =await fetch(`https://blog-coder-app.onrender.com/api/v1/user/signup`,{
+    const res =await fetch(`https://blog-coder-backend.vercel.app/api/v1/user/signup`,{
        
         method:'POST',
         mode: 'cors',

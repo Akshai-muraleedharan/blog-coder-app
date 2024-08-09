@@ -20,7 +20,7 @@ async function loginFetch(e) {
   try {
           // https://blog-coder-app.onrender.com
 
-    const res = await fetch(`https://blog-coder-app.onrender.com/api/v1/user/login`,{
+    const res = await fetch(`https://blog-coder-backend.vercel.app/api/v1/user/login`,{
         credentials: 'include',
         method:"POST",
         headers:{

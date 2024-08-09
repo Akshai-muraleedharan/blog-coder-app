@@ -38,7 +38,7 @@
                     
                     //  http://blog-coder-app.onrender.com
 
-                     const response =await fetch(`https://blog-coder-app.onrender.com/api/v1/post/${productId}`)
+                     const response =await fetch(`https://blog-coder-backend.vercel.app/api/v1/post/${productId}`)
                   
                 
                 const product =await response.json()
