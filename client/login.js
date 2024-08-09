@@ -39,7 +39,7 @@ async function loginFetch(e) {
         passwordError.textContent=data.errors.password
     }
     if(data.user){
-        location.href="./index.html"
+        location.assign('./index.html')
     }
     
   } catch (error) {
