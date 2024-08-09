@@ -55,7 +55,7 @@ async function signupPost(e){
         passwordError.textContent = data.errors.password
     }
     if(data.user){
-         location.assign('./login.html')
+         location.assign('./index.html')
          
     }
 
