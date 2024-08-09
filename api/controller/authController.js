@@ -59,9 +59,11 @@ let options = {
 
 
 module.exports.signup_post = async (req, res) => {
-  const { email, password ,username} = req.body;
-
+  
+  
   try {
+    const { email, password ,username} = req.body;
+    console.log(email,password,username)
     const user = await User.create({ email, password,username });
     
    
